@@ -32,17 +32,17 @@ function onClickImage(evt) {
     return;
   }
   const imageLink = evt.target.dataset.source;
-  // console.log(imageLink);
+  console.log(imageLink);
 
-  const instance = basicLightbox.create(`
+    const instance = basicLightbox.create(`
 		<img width="1200" src="${imageLink}" class="gallery__image">
-	`)
+	`);
   instance.show();
 
-
+   
   document.addEventListener('keydown', function (evt) {
   if (evt.key === 'Escape') {
-    instance.close()
+      instance.close();
   }
 });
 }
